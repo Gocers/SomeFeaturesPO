@@ -29,6 +29,9 @@ public class Main {
             case ("bin"):
                 toBin();
                 break;
+            case ("sum"):
+                sum();
+                break;
             default:
                 System.out.println("Unknown command");
         }
@@ -42,7 +45,16 @@ public class Main {
     private static void toBin(){
         System.out.println("Enter integer number");
         Scanner in = new Scanner(System.in);
-        int n = Integer.parseInt(in.next());
+        int n = in.nextInt();
         System.out.println(Integer.toBinaryString(n));
+    }
+
+    private static void sum(){
+        System.out.println("Enter first value");
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        System.out.println("Enter second value");
+        int b = in.nextInt();
+        System.out.println("= " + (a+b));
     }
 }
