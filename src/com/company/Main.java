@@ -26,6 +26,9 @@ public class Main {
             case("time"):
                 getTime();
                 break;
+            case ("bin"):
+                toBin();
+                break;
             default:
                 System.out.println("Unknown command");
         }
@@ -34,5 +37,12 @@ public class Main {
 
     private static void getTime(){
         System.out.println(java.time.LocalTime.now());
+    }
+
+    private static void toBin(){
+        System.out.println("Enter integer number");
+        Scanner in = new Scanner(System.in);
+        int n = Integer.parseInt(in.next());
+        System.out.println(Integer.toBinaryString(n));
     }
 }
